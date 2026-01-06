@@ -1,6 +1,7 @@
 .about {
-  padding: 4rem 2rem;
+  padding: 4rem 5rem;
   background-color: #fffefc;
+  
 }
 .about-content {
   display: flex;
@@ -8,22 +9,33 @@
   max-width: 1200px;
   margin: 0 auto;
   align-items: center;
+  
 }
 
 .about-text {
   flex: 1;
-  padding-right: 2rem;
-  max-width: 500px;
+  padding-right: 20px;
+  max-width: 700px;
 }
 
-.about-text h2 {
+.about-text h1 {
   font-size: 2rem;
   color: #333;
   margin-bottom: 1rem;
 }
 
-.about-text p {
-  font-size: 1rem;
+.thinner-text {
+  font-weight: 300;
+}
+
+.outline-text {
+  font-weight: 1000;
+  color: white;
+  -webkit-text-stroke:2px black;
+}
+
+ .about-text p {
+  font-size: 1.3rem ;
   color: #666;
   line-height: 1.6;
   margin-bottom: 1rem;
@@ -76,3 +88,4 @@
     justify-content: center;
   }
 }
+

@@ -7,9 +7,10 @@ const Header: React.FC = () => {
         <h1 className="name">Yun-Chia Hsu</h1>
         <nav className="nav">
           {/* <a href="#about">About</a> */}
-          <a href="#projects">Full-stack Projects</a>
+         
+          <a href="#tprojects">Typecript projects</a>
           <br/>
-          <a href="#cprojects">C and C++ Projects</a>
+          <a href="#cprojects">C and C++ projects</a>
           <br/>
         </nav>
       </div>
