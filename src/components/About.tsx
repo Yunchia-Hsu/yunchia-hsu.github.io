@@ -1,22 +1,67 @@
 import React from "react";
 import "./About.css";
 import profilePic from "../assets/selphie.png";
+import { useEffect, useRef } from "react";
+import { annotate } from "rough-notation";
+
 
 const About: React.FC = () => {
+  const underlineRef = useRef(null);
+  const aiuntRef = useRef(null);
+  useEffect(() => {
+    const a = annotate(underlineRef.current, {
+      type: "underline",
+      color: "#B497D6", //dusty lavender
+      strokeWidth: 2,
+      padding: 2,
+      iterations: 2,      // 手繪感更強（兩筆線）
+      animate: false,
+      animationDuration: 800,
+    });
+    const b = annotate(aiuntRef.current, {
+      type: "underline",
+      color: "#B497D6", // #F7DC6Fsoft yellow
+      strokeWidth: 2,
+      padding: 2,
+      iterations: 2,
+      animate: false,
+      animationDuration: 800,
+    });
+
+    a.show();
+    b.show();
+
+    return () => {
+      a.remove();
+      b.remove();
+    } // 離開時清掉
+  }, []);
   return (
     <section id="about" className="about">
       <div className="about-content">
-        <div className="about-tect">
-          <h2>Hello! I'm Yun-Chia Hsu </h2>
+        <div className="about-text">
+         <h1 >
+        <span className="thinner-text"> Hello! I'm
+          </span>
+          <span className="outline-tex"> Yun-Chia Hsu <br/>
+         Full-stack Software Developer 
+          <br />  <span className="thinner-text"> Based in  </span >
+          Helsinki
+          </span >
+          </h1>
           <p>
-            Software Engineer with a passion for creating AI integrated
-            full-stack solutions.
-          </p>
-          <p>
-            I love exploring new technologies. Other than that I'm either
-            drinking coffee or doing bouldering.
+            <span ref={aiuntRef}>AI-integrated Full-stack</span> developer.
             <br />
-            Ice skating is my NEW winter hobby.
+            With 2 years experience in building user-centered applications in
+            <span ref={underlineRef}> Typescript, React, Node.js.</span>
+          </p>
+          
+          <p>
+            I enjoy exploring new technologies.
+            <br />
+            Living in FInlnad has shaped both my work style and mindset. 
+            <br />
+            Outside of coding, you’ll often find me enjoying good coffee or challenging myself at the bouldering gym.
           </p>
         </div>
         <div className="about-image">
