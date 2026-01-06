@@ -36,12 +36,12 @@ const Projects: React.FC = () => {
                 <div className="project-grid">
                     {
                         projects.map((project, index) => (
-                            <div key={index} className="project-card" href={project.link}  target="_blank" rel="noopener noreferrer">
+                            <a key={index} className="project-card" href={project.link}  target="_blank" rel="noopener noreferrer">
                                 <img src={project.image} alt={project.title} className="project-image" />
                                 <h3 className="project-title">{project.title}</h3>
                                 <p className="project-description">{project.description}</p>
                                 <a href={project.link}  target="_blank" rel="noopener noreferrer"> view project</a>
-                            </div>
+                            </a>
                         ))
                     }
                 </div>
