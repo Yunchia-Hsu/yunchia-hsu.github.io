@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "./components/Header.tsx";
 import About from "./components/About.tsx";
 import Project from "./components/Projects.tsx";
