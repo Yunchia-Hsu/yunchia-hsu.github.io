@@ -14,6 +14,9 @@ function App() {
           <About />
           <Project />
         </main>
+        <footer>
+        <p>© 2026 Yun-Chia Hsu All rights reserved.</p>
+      </footer>
       </div>
     </>
   );
