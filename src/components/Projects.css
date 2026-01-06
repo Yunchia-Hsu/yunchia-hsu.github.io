@@ -23,7 +23,7 @@
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
-  text-decoration: none;
+  text-decoration: none; /*delete underscore */
   color: inherit;
 }
 .project-card:hover {
@@ -50,7 +50,7 @@
   text-align: center;
   margin: 1rem;
   padding: 0.5rem 1rem;
- background-color: #d7d7d7;
+  background-color: #d7d7d7;
   color: black;
   border-radius: 4px;
   text-decoration: none;
