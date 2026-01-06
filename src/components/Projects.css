@@ -23,6 +23,8 @@
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  text-decoration: none;
+  color: inherit;
 }
 .project-card:hover {
   transform: translateY(-5px);
