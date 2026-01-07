@@ -12,7 +12,8 @@ const About: React.FC = () => {
     if (reactRef.current && aiuntRef.current && typescriptRef.current) {
       const a = annotate(reactRef.current, {
         type: "underline",
-        color: "#B497D6", //dusty lavender
+        //color: "#B497D6", //dusty lavender
+        color: "#8FAADC",
         strokeWidth: 2,
         padding: 2,
         iterations: 2, //hand wirte vite
@@ -21,7 +22,7 @@ const About: React.FC = () => {
       });
       const b = annotate(aiuntRef.current, {
         type: "underline",
-        color: "#B497D6", // #F7DC6Fsoft yellow
+        color: "#B497D6", // 
         strokeWidth: 2,
         padding: 2,
         iterations: 2,
@@ -30,7 +31,7 @@ const About: React.FC = () => {
       });
       const c = annotate(typescriptRef.current, {
         type: "underline",
-        color: "#B497D6", // #F7DC6Fsoft yellow
+        color: "#8FAADC", // #F7DC6Fsoft yellow
         strokeWidth: 2,
         padding: 2,
         iterations: 2,
