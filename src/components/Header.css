@@ -1,5 +1,6 @@
 .header {
-  background-color: rgb(228, 231, 211);
+  /* background-color: rgb(228, 231, 211); */
+  background-color: #F7F3EE;
   width: 100vw;
   color: black;
   margin-left: calc(-50vw + 50%);
