@@ -4,64 +4,82 @@ import profilePic from "../assets/selphie.png";
 import { useEffect, useRef } from "react";
 import { annotate } from "rough-notation";
 
-
 const About: React.FC = () => {
-  const underlineRef = useRef(null);
+  const reactRef = useRef(null);
+  const typescriptRef = useRef(null);
   const aiuntRef = useRef(null);
   useEffect(() => {
-    const a = annotate(underlineRef.current, {
-      type: "underline",
-      color: "#B497D6", //dusty lavender
-      strokeWidth: 2,
-      padding: 2,
-      iterations: 2,      // 手繪感更強（兩筆線）
-      animate: false,
-      animationDuration: 800,
-    });
-    const b = annotate(aiuntRef.current, {
-      type: "underline",
-      color: "#B497D6", // #F7DC6Fsoft yellow
-      strokeWidth: 2,
-      padding: 2,
-      iterations: 2,
-      animate: false,
-      animationDuration: 800,
-    });
+    if (reactRef.current && aiuntRef.current && typescriptRef.current) {
+      const a = annotate(reactRef.current, {
+        type: "underline",
+        color: "#B497D6", //dusty lavender
+        strokeWidth: 2,
+        padding: 2,
+        iterations: 2, //hand wirte vite
+        animate: false,
+        animationDuration: 800,
+      });
+      const b = annotate(aiuntRef.current, {
+        type: "underline",
+        color: "#B497D6", // #F7DC6Fsoft yellow
+        strokeWidth: 2,
+        padding: 2,
+        iterations: 2,
+        animate: false,
+        animationDuration: 800,
+      });
+      const c = annotate(typescriptRef.current, {
+        type: "underline",
+        color: "#B497D6", // #F7DC6Fsoft yellow
+        strokeWidth: 2,
+        padding: 2,
+        iterations: 2,
+        animate: false,
+        animationDuration: 800,
+      });
 
-    a.show();
-    b.show();
+      a.show();
+      b.show();
+      c.show();
 
-    return () => {
-      a.remove();
-      b.remove();
-    } // 離開時清掉
+      return () => {
+        a.remove();
+        b.remove();
+      }; // 離開時清掉
+    }
   }, []);
   return (
     <section id="about" className="about">
       <div className="about-content">
         <div className="about-text">
-         <h1 >
-        <span className="thinner-text"> Hello! I'm
-          </span>
-          <span className="outline-tex"> Yun-Chia Hsu <br/>
-         Full-stack Software Developer 
-          <br />  <span className="thinner-text"> Based in  </span >
-          Helsinki
-          </span >
+          <h1>
+            <span className="thinner-text"> Hello! I'm</span>
+            <span className="outline-tex">
+              {" "}
+              Yun-Chia Hsu <br />
+              Full-stack Software Developer
+              <br /> <span className="thinner-text"> Based in </span>
+              Helsinki
+            </span>
           </h1>
           <p>
-            <span ref={aiuntRef}>AI-integrated Full-stack</span> developer.
+            AI-integrated
+            <span ref={aiuntRef}> Full-stack</span> developer.
             <br />
             With 2 years experience in building user-centered applications in
-            <span ref={underlineRef}> Typescript, React, Node.js.</span>
+            <span ref={typescriptRef}> Typescript </span>
+            and
+            <span ref={reactRef}> React.</span>
           </p>
-          
+
           <p>
             I enjoy exploring new technologies.
             <br />
-            Living in FInlnad has shaped both my work style and mindset. 
+            Living in Finlnad has shaped both my work style and mindset,
+            emphasizing autonomy and clear communication.
             <br />
-            Outside of coding, you’ll often find me enjoying good coffee or challenging myself at the bouldering gym.
+            Outside of coding, you'll often find me enjoying good coffee or
+            challenging myself at the bouldering gym.
           </p>
         </div>
         <div className="about-image">

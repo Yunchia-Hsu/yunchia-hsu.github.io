@@ -24,7 +24,7 @@ const TProjects: React.FC = () => {
   return (
     <section id="cprojects" className="projects">
       <div className="project-content">
-        <h1>C and C++ Projects</h1>
+        <h1>C / C++ Projects</h1>
         <br />
         <div className="project-grid">
           {projects.map((project, index) => (
