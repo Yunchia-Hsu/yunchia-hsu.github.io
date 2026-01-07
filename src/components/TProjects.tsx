@@ -2,7 +2,7 @@ import React from "react";
 import "./TProjects.css";
 import project1 from "../assets/pong.png";
 import project2 from "../assets/muyu.png";
-import project3 from "../assets/proprmemaybe.png";
+
 
 const TProjects: React.FC = () => {
   const projects = [
