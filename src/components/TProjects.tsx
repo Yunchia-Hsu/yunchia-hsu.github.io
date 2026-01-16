@@ -15,7 +15,7 @@ const TProjects: React.FC = () => {
     {
       title: "MuYu Tea Website",
       description:
-        "Full-stack tea shop website provited tea introduction and courses.",
+        "Full-stack tea studio courses website.",
       image: project2,
       link: "https://github.com/Yunchia-Hsu/muyu-tea-website",
     },
