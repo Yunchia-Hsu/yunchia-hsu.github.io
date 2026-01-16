@@ -13,7 +13,7 @@ const TProjects: React.FC = () => {
       link: "https://github.com/Yunchia-Hsu/ft_transcendence",
     },
     {
-      title: "MuYu",
+      title: "MuYu Tea Website",
       description:
         "Full-stack tea shop website provited tea introduction and courses.",
       image: project2,
