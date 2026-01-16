@@ -95,7 +95,7 @@ const About: React.FC = () => {
             </a>
 
             <a
-              href="www.linkedin.com/in/yun-chia-hsu-b95406138"
+              href="https://www.linkedin.com/in/yun-chia-hsu-b95406138/"
               target="_blank"
             >
               <img
