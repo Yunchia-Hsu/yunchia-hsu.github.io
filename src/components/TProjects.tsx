@@ -2,7 +2,8 @@ import React from "react";
 import "./TProjects.css";
 import project1 from "../assets/pong.png";
 import project2 from "../assets/muyu.png";
-
+import project3 from "../assets/picture2storytelling.png";
+import project4 from "../assets/ai-tutor.png";
 
 const TProjects: React.FC = () => {
   const projects = [
@@ -15,9 +16,23 @@ const TProjects: React.FC = () => {
     {
       title: "MuYu Tea Website",
       description:
-        "Full-stack tea studio courses website.",
+        "Full-stack tea courses website.",
       image: project2,
       link: "https://github.com/Yunchia-Hsu/muyu-tea-website",
+    },
+    {
+      title: "Picture Prompt Storytelling",
+      description:
+        "A Hugging Face Space app that turns an uploaded image into a learner-friendly audio story.",
+      image: project3,
+      link: "https://github.com/Yunchia-Hsu/Picture_Prompt_Storytelling",
+    },
+    {
+      title: "MY Own AI Tutor",
+      description:
+        "Full-stack AI language learning platform that uses GPT-4o to provide personalized advice, level assessment, and auto-generated practice to improve users’ English proficiency..",
+      image: project4,
+      link: "https://github.com/Yunchia-Hsu/Personal-AI-tutor",
     },
    
    

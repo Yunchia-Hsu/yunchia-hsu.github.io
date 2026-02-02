@@ -1,24 +1,40 @@
 import React from "react";
 import "./CProjects.css";
 
-import project3 from "../assets/proprmemaybe.png";
-import project4 from "../assets/webserver.png";
+import project1 from "../assets/proprmemaybe.png";
+import project2 from "../assets/webserver.png";
+import project3 from "../assets/minishell.png";
+import project4 from "../assets/so-long.png";
 
 const TProjects: React.FC = () => {
   const projects = [
     {
-      title: "Prompt Me Maybe",
+      title: "Prompt Me Maybe in C",
       description:
         "Supercell AI Hackathon winning game: AI-Assisted Retro Ray-Casting shooting game.",
-      image: project3,
+      image: project1,
       link: "https://github.com/Yunchia-Hsu/PromptMeMaybe",
     },
     {
       title: "Webserver in C++",
       description:
         " It is a lightweight, HTTP 1.1-compliant web server built from scratch in C++.",
-      image: project4,
+      image: project2,
       link: "https://github.com/Yunchia-Hsu/webserv",
+    },
+    {
+      title: "Minishell in C",
+      description:
+        "It is a A simplified bash-like shell in C.",
+      image: project3,
+      link: "https://github.com/Yunchia-Hsu/minishell",
+    },
+    {
+      title: "Howlloween 2D game in C",
+      description:
+        "A 2D game written in C!.",
+      image: project4,
+      link: "https://github.com/Yunchia-Hsu/so_long",
     },
   ];
   return (
