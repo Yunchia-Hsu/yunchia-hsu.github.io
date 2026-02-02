@@ -1,29 +1,33 @@
 import React from "react";
 import "./TProjects.css";
-import project1 from "../assets/pong.png";
-import project2 from "../assets/muyu.png";
+
+import project3 from "../assets/picture2storytelling.png";
+import project4 from "../assets/ai-tutor.png";
 
 const TProjects: React.FC = () => {
   const projects = [
+   
     {
-      title: "Pong Game",
-      description: "Full-stack Pong Game with AI opponent.",
-      image: project1,
-      link: "https://github.com/Yunchia-Hsu/ft_transcendence",
-    },
-    {
-      title: "MuYu Tea Website",
+      title: "Picture Prompt Storytelling",
       description:
-        "Full-stack tea courses website.",
-      image: project2,
-      link: "https://github.com/Yunchia-Hsu/muyu-tea-website",
+        "A Hugging Face Space app that turns an uploaded image into a learner-friendly audio story.",
+      image: project3,
+      link: "https://github.com/Yunchia-Hsu/Picture_Prompt_Storytelling",
     },
+    {
+      title: "MY Own AI Tutor",
+      description:
+        "Full-stack AI language learning platform that uses GPT-4o to provide personalized advice, level assessment, and auto-generated practice to improve users’ English proficiency..",
+      image: project4,
+      link: "https://github.com/Yunchia-Hsu/Personal-AI-tutor",
+    },
+   
    
   ];
   return (
-    <section id="tprojects" className="projects">
+    <section id="jprojects" className="projects">
       <div className="project-content">
-        <h1>TypeScript Projects</h1>
+        <h1>JavaScript/ Python Projects</h1>
         <br />
         <div className="project-grid">
           {projects.map((project, index) => (

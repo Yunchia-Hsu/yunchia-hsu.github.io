@@ -58,7 +58,7 @@ const About: React.FC = () => {
             <span className="outline-tex">
               {" "}
               Yun-Chia Hsu <br />
-              Full-stack Software Developer
+              Software Developer
               <br /> <span className="thinner-text"> Based in </span>
               Helsinki
             </span>

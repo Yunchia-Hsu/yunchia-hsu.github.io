@@ -8,9 +8,11 @@ const Header: React.FC = () => {
         <nav className="nav">
           {/* <a href="#about">About</a> */}
          
-          <a href="#tprojects">Typecript projects</a>
+          <a href="#tprojects">Projects:  TypeScript</a>
           <br/>
-          <a href="#cprojects">C and C++ projects</a>
+          <a href="#jprojects">JavaScript/Python </a>
+          <br/>
+          <a href="#cprojects">C and C++ </a>
           <br/>
         </nav>
       </div>
