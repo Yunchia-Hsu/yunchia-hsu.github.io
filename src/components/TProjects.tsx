@@ -6,19 +6,18 @@ import project2 from "../assets/muyu.png";
 const TProjects: React.FC = () => {
   const projects = [
     {
-      title: "Pong Game",
-      description: "Full-stack Pong Game with AI opponent.",
-      image: project1,
-      link: "https://github.com/Yunchia-Hsu/ft_transcendence",
-    },
-    {
       title: "MuYu Tea Website",
       description:
         "Full-stack tea courses website.",
       image: project2,
       link: "https://github.com/Yunchia-Hsu/muyu-tea-website",
     },
-   
+    {
+      title: "Pong Game",
+      description: "Full-stack Pong Game with AI opponent.",
+      image: project1,
+      link: "https://github.com/Yunchia-Hsu/ft_transcendence",
+    },
   ];
   return (
     <section id="tprojects" className="projects">
