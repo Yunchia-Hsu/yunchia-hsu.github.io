@@ -88,4 +88,48 @@
     justify-content: center;
   }
 }
+.chip {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(6px);
+  animation: popIn 0.6s ease forwards;
+}
 
+.delay-1 { animation-delay: 0.05s; }
+.delay-2 { animation-delay: 0.12s; }
+.delay-3 { animation-delay: 0.19s; }
+.delay-4 { animation-delay: 0.26s; }
+
+@keyframes popIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+.u-line {
+  position: relative;
+  display: inline-block; /* 讓 underline 長度跟文字一樣 */
+  padding-bottom: 2px;   /* 底線跟字的距離 */
+}
+
+/* underscore(底線)本體 */
+.u-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;          /* 線的粗細 */
+  width: 100%;
+  transform: scaleX(0); /* 一開始看不到 */
+  transform-origin: left;
+  opacity: 0.9;
+  background: currentColor; /* 跟文字同色，像 underscore */
+  animation: underlineGrow 650ms ease forwards;
+}
+
+/* 每個字不同延遲 -> 看起來是分別動畫 */
+.u-ts::after   { animation-delay: 0.05s; }
+.u-react::after{ animation-delay: 0.18s; }
+.u-rn::after   { animation-delay: 0.31s; }
+.u-cpp::after  { animation-delay: 0.44s; }
+
+@keyframes underlineGrow {
+  to { transform: scaleX(1); }
+}

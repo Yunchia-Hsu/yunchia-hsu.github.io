@@ -3,17 +3,33 @@ import "./About.css";
 import profilePic from "../assets/selphie.png";
 import { useEffect, useRef } from "react";
 import { annotate } from "rough-notation";
+import gsap from "gsap";
 
 const About: React.FC = () => {
   const reactRef = useRef(null);
   const typescriptRef = useRef(null);
   const aiuntRef = useRef(null);
+  const reactnativeRef = useRef(null);
+
+  const refs = useRef([]);
   useEffect(() => {
-    if (reactRef.current && aiuntRef.current && typescriptRef.current) {
+    gsap.fromTo(
+      refs.current,
+      { opacity: 0, y: 8 },
+      { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: "power2.out" }
+    );
+  }, []);
+
+  useEffect(() => {
+    if (
+      reactRef.current &&
+      aiuntRef.current &&
+      typescriptRef.current &&
+      reactnativeRef.current
+    ) {
       const a = annotate(reactRef.current, {
         type: "underline",
-        //color: "#B497D6", //dusty lavender
-        color: "#8FAADC",
+        color: "#06B6D4",
         strokeWidth: 2,
         padding: 2,
         iterations: 2, //hand wirte vite
@@ -22,7 +38,7 @@ const About: React.FC = () => {
       });
       const b = annotate(aiuntRef.current, {
         type: "underline",
-        color: "#B497D6", // 
+        color: "#B497D6",
         strokeWidth: 2,
         padding: 2,
         iterations: 2,
@@ -31,7 +47,16 @@ const About: React.FC = () => {
       });
       const c = annotate(typescriptRef.current, {
         type: "underline",
-        color: "#8FAADC", // #F7DC6Fsoft yellow
+        color: "#8FAADC",
+        strokeWidth: 2,
+        padding: 2,
+        iterations: 2,
+        animate: false,
+        animationDuration: 800,
+      });
+      const d = annotate(reactnativeRef.current, {
+        type: "underline",
+        color: "#B497D6",
         strokeWidth: 2,
         padding: 2,
         iterations: 2,
@@ -42,11 +67,12 @@ const About: React.FC = () => {
       a.show();
       b.show();
       c.show();
-
+      d.show();
       return () => {
         a.remove();
         b.remove();
-      }; // 離開時清掉
+        c.remove();
+      };
     }
   }, []);
   return (
@@ -54,33 +80,33 @@ const About: React.FC = () => {
       <div className="about-content">
         <div className="about-text">
           <h1>
-            <span className="thinner-text"> Hello! I'm</span>
+            <span className="thinner-text"> 👋 Hello! I'm</span>
             <span className="outline-tex">
               {" "}
               Yun-Chia Hsu <br />
-              Software Developer
+              Product-Focused Software Developer
               <br /> <span className="thinner-text"> Based in </span>
               Helsinki
             </span>
           </h1>
-          <p>
-            AI-integrated
-            <span ref={aiuntRef}> Full-stack</span> developer.
-            <br />
-            With 2 years experience in building user-centered applications in
-            <span ref={typescriptRef}> Typescript </span>
-            and
-            <span ref={reactRef}> React.</span>
-          </p>
 
+          <div>
+            <p>After 5 years as a PM, I wanted to build products myself, 
+            not just plan them. So I learned to code.</p>
+            <p>
+            Now I solve problems with code and leverage AI tools to ship faster.
+            </p>
+          </div>
           <p>
-            I enjoy exploring new technologies.
+            Tech Stack:
             <br />
-            Living in Finlnad has shaped both my work style and mindset,
-            emphasizing autonomy and clear communication.
-            <br />
-            Outside of coding, you'll often find me enjoying good coffee or
-            challenging myself at the bouldering gym.
+            <span ref={typescriptRef}> TypeScript </span>
+            <span> • </span>
+            <span ref={aiuntRef}>React </span>
+            <span> • </span>
+            <span ref={reactnativeRef}> React Native </span>
+            and
+            <span ref={reactRef}> C/C++ </span>
           </p>
         </div>
         <div className="about-image">
